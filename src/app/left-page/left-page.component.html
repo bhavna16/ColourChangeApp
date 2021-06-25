@@ -1,3 +1,6 @@
 <div class="left-page-div">
-    Hex Code: <input type="text" [(ngModel)]="hexaColourCode" (ngModelChange)="changeColour()">
+    Hex Code: <input type="text" maxlength="6" [(ngModel)]="hexaColourCode" (ngModelChange)="changeColour()">
+
+    <br>
+    {{errorMessage}}
 </div>

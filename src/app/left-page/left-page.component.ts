@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class LeftPageComponent implements OnInit {
   @Output() emitColour = new EventEmitter();
   hexaColourCode: any;
+  errorMessage: string;
 
   constructor() { }
 
@@ -21,10 +22,16 @@ export class LeftPageComponent implements OnInit {
 
   changeColour() {
     debugger
-    var etty = {
-      "colourCode": "#" + this.hexaColourCode
+    if (this.hexaColourCode.length != 6) {
+      this.errorMessage = "Invalid colour code.";
     }
-    this.emitColour.emit(etty);
+    else {
+      this.errorMessage = "";
+      var etty = {
+        "colourCode": "#" + this.hexaColourCode
+      }
+      this.emitColour.emit(etty);
+    }
   }
 
 }

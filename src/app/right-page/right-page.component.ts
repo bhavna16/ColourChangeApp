@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-right-page',
@@ -7,14 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RightPageComponent implements OnInit {
 
-  @Input() colourCode;
-
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  changeColour(even){
     debugger
-    console.log("input colour : ", this.colourCode);
-    document.getElementById("right-div").style.backgroundColor = this.colourCode;
+    console.log("input colour : ", even.colour);
+    document.getElementById("right-div").style.backgroundColor = even.colour;
   }
 
 }
