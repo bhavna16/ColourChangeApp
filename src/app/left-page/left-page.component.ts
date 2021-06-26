@@ -13,7 +13,6 @@ export class LeftPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    debugger
     var etty = {
       "colourCode": "#000000"
     }
@@ -21,7 +20,6 @@ export class LeftPageComponent implements OnInit {
   }
 
   changeColour() {
-    debugger
     if (this.hexaColourCode.length != 6) {
       this.errorMessage = "Invalid colour code.";
     }

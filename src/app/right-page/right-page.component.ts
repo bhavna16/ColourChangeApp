@@ -13,7 +13,6 @@ export class RightPageComponent implements OnInit {
   }
 
   changeColour(even){
-    debugger
     console.log("input colour : ", even.colour);
     document.getElementById("right-div").style.backgroundColor = even.colour;
   }
